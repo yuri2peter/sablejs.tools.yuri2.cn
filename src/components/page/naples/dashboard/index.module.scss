@@ -1,0 +1,41 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 60vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.item {
+  margin: 0 2em;
+  display: flex;
+  width: 460px;
+  font-size: 1em;
+  color: rgb(70, 70, 70);
+  margin-top: 0.5em;
+  .name {
+    text-align: right;
+    width: 50%;
+    margin-right: 1em;
+    &::after {
+      content: ': ';
+    }
+  }
+  .content {
+    text-align: left;
+    width: 45%;
+  }
+}
