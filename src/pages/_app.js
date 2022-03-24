@@ -1,4 +1,5 @@
 import { Provider } from 'react-redux';
+import { SnackbarProvider } from 'notistack';
 import Head from 'next/head';
 import 'normalize.css';
 import 'src/styles/globals.scss';
@@ -14,7 +15,9 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
       </Head>
-      <Component {...pageProps} />
+      <SnackbarProvider maxSnack={3}>
+        <Component {...pageProps} />
+      </SnackbarProvider>
     </Provider>
   );
 }
